@@ -1,4 +1,4 @@
 # Capstone-Project---DevOps-CI-CD-Pipeline!
 
-# Mock Architecture Diagram
+# Draft Architecture Diagram
 ![Alt text](Capstone%20Project.jpg)
