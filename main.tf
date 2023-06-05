@@ -1,7 +1,7 @@
 ## Provider AWS
 
 provider "aws" {
-    region = "ap-northeast-1"
+  region = "ap-northeast-1"
 }
 
 ## Create VPC
@@ -16,11 +16,11 @@ module "vpc" {
   private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
   public_subnets  = ["10.0.101.0/24", "10.0.102.0/24"]
 
-/*   enable_nat_gateway = true
+  /*   enable_nat_gateway = true
   enable_vpn_gateway = true */
 
   tags = {
-    Terraform = "true"
+    Terraform   = "true"
     Environment = "dev"
   }
 }
@@ -49,7 +49,7 @@ module "ecs" {
       container_definitions = {
 
         group3-ecs-container = { #container name
-          essential = true 
+          essential = true
           image     = "public.ecr.aws/docker/library/httpd:latest"
           port_mappings = [
             {
@@ -62,16 +62,16 @@ module "ecs" {
 
         }
       }
-      assign_public_ip = true
+      assign_public_ip                   = true
       deployment_minimum_healthy_percent = 100
-      subnet_ids = ["subnet-0c367963f6cb16292", "subnet-0db7c7648426ccf6f"]
+      subnet_ids                         = ["subnet-0c367963f6cb16292", "subnet-0db7c7648426ccf6f"]
       security_group_rules = {
         ingress_all = {
-          type                     = "ingress"
-          from_port                = 0
-          to_port                  = 0
-          protocol                 = "-1"
-          description              = "Allow all"
+          type        = "ingress"
+          from_port   = 0
+          to_port     = 0
+          protocol    = "-1"
+          description = "Allow all"
           cidr_blocks = ["0.0.0.0/0"]
         }
         egress_all = {
