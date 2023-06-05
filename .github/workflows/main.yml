@@ -32,7 +32,7 @@ on:
 
 env:            
   AWS_REGION: ap-northeast-1          
-  ECR_REPOSITORY: group3-ecr       
+  ECR_REPOSITORY: group3-ecr
   ECS_SERVICE: group3-ecs         
   ECS_CLUSTER: group3-ecs-tf                   
   CONTAINER_NAME: group3-ecs-container         
