@@ -88,7 +88,7 @@ module "ecs" {
 }
 
 
-##Test TF Workflow with EC2
+##Test TF Workflow with EC2 2
 
 /* resource "aws_instance" "testEC2" {
   ami = "ami-03dceaabddff8067e"
