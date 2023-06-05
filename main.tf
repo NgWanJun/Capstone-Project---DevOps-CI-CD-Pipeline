@@ -48,7 +48,7 @@ module "ecs" {
       # Container definition(s)
       container_definitions = {
 
-        ecs-sample = { #container name
+        group3-ecs-container = { #container name
           essential = true 
           image     = "public.ecr.aws/docker/library/httpd:latest"
           port_mappings = [
